@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visitor Counter</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+        #counter {
+            font-size: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <h1>Don't plug in random devices!</h1>
+    <p>This is confirmed security testing. So far, this many people have done the same:</p>
+    <div id="counter">0</div>
+
+    <script>
+        // Retrieve the current count from localStorage
+        let count = localStorage.getItem('visitorCount');
+
+        // If count is null (first visit), initialize it to 0
+        if (count === null) {
+            count = 0;
+        } else {
+            count = parseInt(count);
+        }
+
+        // Increment the count and update the display
+        count++;
+        document.getElementById('counter').textContent = count;
+
+        // Store the updated count in localStorage
+        localStorage.setItem('visitorCount', count.toString());
+    </script>
+</body>
+</html>
