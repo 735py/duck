@@ -1,42 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Visitor Counter</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            padding: 50px;
-        }
-        #counter {
-            font-size: 2rem;
-        }
-    </style>
-</head>
-<body>
-    <h1>Do you know what's on this USB? You're lucky, it's just this file!</h1>
-    <p>Don't plug in random USBs! Don't worry, you're safe-- this is confirmed security testing. So far, this many people have done the same:</p>
-    <div id="counter">0</div>
-
-    <script>
-        // Retrieve the current count from localStorage
-        let count = localStorage.getItem('visitorCount');
-
-        // If count is null (first visit), initialize it to 0
-        if (count === null) {
-            count = 0;
-        } else {
-            count = parseInt(count);
-        }
-
-        // Increment the count and update the display
-        count++;
-        document.getElementById('counter').textContent = count;
-
-        // Store the updated count in localStorage
-        localStorage.setItem('visitorCount', count.toString());
-    </script>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>USB Safety</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                text-align: center;
+                margin: 50px;
+            }
+        
+            h1 {
+                color: #FF5733;
+            }
+        
+            p {
+                color: #333;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>DO YOU KNOW WHAT YOU JUST PLUGGED IN?</h1>
+        <h1>Do you know what's on this USB? You're lucky, it's just this file!</h1>
+        <p>Be cautious when you plug random devices into your computer! Do you know where this USB came from?</p>
+        <p>Don't worry. You haven't been hacked or given a virus. This study is approved by USCA's Technology Services Department.</p>
+    </body>
 </html>
